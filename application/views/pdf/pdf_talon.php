@@ -131,7 +131,7 @@
                 <tr>
                     <td colspan="2">Calificación artesanal: 
                             <label style="font-weight: normal;">
-                                109859
+                                153942
                             </label>
                     </td>
                     <th></th>
@@ -148,17 +148,17 @@
                             <label style="font-weight: normal;">
                                 <?php echo $factura->fac_numero?>
                             </label>
-            
-                    </td>
+
+                 </td>
                     <th></th>
                 </tr> 
                 <tr>
-                  <td colspan="2">Fecha emision: 
+                    <td colspan="2">Fecha emision: 
                             <label style="font-weight: normal;">
                                 <?php echo $factura->fac_fecha_emision?>
-                            </label> 
+                            </label>
 
-                   </td>
+               </td>
                     <th></th>
                 </tr> 
                 <tr>
@@ -176,9 +176,7 @@
                                 }
                                
                                 ?>
-                                </label>   
-
-
+                            </label>   
                     </td>
                     <th></th>
                 </tr> 
@@ -213,14 +211,14 @@
                      Normal
                  </label>
              </td>
-                </tr>   
+                </tr> 
                 <tr>
-                    <td colspan="2"> <?php echo ('Factura N°:') ?>
+                    <td colspan="2"> <?php echo utf8_encode('Factura :') ?>
                         <label style="font-weight: normal;">
                         <?php echo trim($factura->fac_numero)?>
                        </label>
                 </td>
-                </tr>
+                </tr>  
                   
             </table>
         </td>
@@ -272,7 +270,7 @@
                     <tr >
                       
                         <th >Cantidad</th>
-                        <th ><?php echo ('Código') ?></th>
+                        <th ><?php echo ('Códido') ?></th>
                         <th><?php echo ('Descripción') ?></th>
                         <th >P.Unitario</th>
                         <th >P.Total</th>
@@ -300,7 +298,7 @@
                         <td id="inv" colspan="2" rowspan="4" valign="top" >
                             
                         </td>
-                        <td colspan="2"><strong>Subtotal 12%</strong></td>
+                        <td colspan="2"><strong>Subtotal <?php echo $t_iva ?>%:</strong></td>
                         <td class="numerico"><?php echo number_format($factura->fac_subtotal12,$dec)?></td>
                     </tr>
                     <tr>
@@ -324,7 +322,7 @@
                         <td class="numerico"><?php echo number_format($factura->fac_total_descuento,$dec)?></td>
                     </tr> -->
                     <tr>
-                        <td colspan="2"><strong>IVA 12%</strong></td>
+                        <td colspan="2"><strong>IVA <?php echo $t_iva ?>%:</strong></td>
                         <td class="numerico"><?php echo number_format($factura->fac_total_iva,$dec)?></td>
                     </tr>
                     <!-- <tr>
